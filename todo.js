@@ -8,17 +8,17 @@ let taskArr = [];
 
 addTask.addEventListener("click", () => {
   const newList = document.createElement("li");
-  
+
   const newImg = document.createElement("img");
   newImg.src = "/icons/deleteicon1.svg";
   newImg.classList.add("list-icon");
   taskBox.style.display = "block";
   taskArr.push(task.value);
 
-  for(let i = 0; i < taskArr.length; i++) {
+  for (let i = 0; i < taskArr.length; i++) {
     newList.textContent = taskArr[i];
   }
-  
+
   listBox.append(newList);
   newList.append(newImg);
   localStorage.setItem("elxan", JSON.stringify(taskArr));
@@ -35,11 +35,14 @@ addTask.addEventListener("click", () => {
     newImg.remove();
   });
 
-
   console.log(data);
-
 });
 
 xbtn.addEventListener("click", () => {
   task.value = "";
 });
+
+//=========================================
+//=========================================
+//=========================================
+//=========================================
